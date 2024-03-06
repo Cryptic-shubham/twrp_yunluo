@@ -15,8 +15,8 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+    android.hardware.boot-service.default \
+    android.hardware.boot-service.default_recovery
 
 PRODUCT_PACKAGES += \
     bootctrl.mt6789
@@ -38,6 +38,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl:64 \
+    android.hardware.gatekeeper@1.0-service
+
+# Keymaster / Keymint
+PRODUCT_PACKAGES += \
+	libkeymaster_messages.vendor:64 \
+	libkeymaster_portable.vendor:64 \
+	libkeymint.vendor:64 \
+	libpuresoftkeymasterdevice.vendor:64
 
 # Health HAL
 PRODUCT_PACKAGES += \
