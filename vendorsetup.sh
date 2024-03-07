@@ -4,7 +4,4 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-
-add_lunch_combo omni_yunluo-user
-add_lunch_combo omni_yunluo-userdebug
-add_lunch_combo omni_yunluo-eng
+add_lunch_combo twrp_yunluo-eng
