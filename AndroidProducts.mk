@@ -1,14 +1,7 @@
-#
-# Copyright (C) 2024 The Android Open Source Project
-# Copyright (C) 2024 SebaUbuntu's TWRP device tree generator
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_yunluo.mk
+    $(LOCAL_DIR)/twrp_yunluo.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_yunluo-user \
-    omni_yunluo-userdebug \
-    omni_yunluo-eng
+    twrp_yunluo-user \
+    twrp_yunluo-userdebug \
+    twrp_yunluo-eng
