@@ -9,6 +9,8 @@ DEVICE_PATH := device/xiaomi/yunluo
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -107,7 +109,11 @@ BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 # Platform
 BOARD_VENDOR := xiaomi
 TARGET_BOARD_PLATFORM := mt6789 
+
+# MTK Hardware 
 BOARD_HAS_MTK_HARDWARE := true
+BOARD_USES_MTK_HARDWARE := true
+MTK_HARDWARE := true
 BOARD_HAVE_MTK_FM := true
 
 # Recovery
@@ -115,9 +121,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
-
-# Security patch level
-VENDOR_SECURITY_PATCH := 2021-08-01
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
