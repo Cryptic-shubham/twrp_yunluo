@@ -6,6 +6,11 @@
 #
 
 LOCAL_PATH := device/xiaomi/yunluo
+
+ Virtual A/B
+ENABLE_VIRTUAL_AB := true
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -13,13 +18,21 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
-# Boot control HAL
+# Screen
+TARGET_SCREEN_HEIGHT := 2000
+TARGET_SCREEN_WIDTH := 1200
+
+# Bootctrl
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+    android.hardware.boot@1.2-mtkimpl \
+    android.hardware.boot@1.2-mtkimpl.recovery
+
 
 PRODUCT_PACKAGES += \
     bootctrl.mt6789
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctrl
 
 # PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 #    bootctrl.mt6789 \
@@ -27,12 +40,21 @@ PRODUCT_PACKAGES += \
 #    libz \
 #    libcutils
 
+# MTK PlPath Utils
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils.recovery
+
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+# Additional binaries & libraries needed for recovery
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libion \
+    libpuresoftkeymasterdevice
 
 # fastbootd
 PRODUCT_PACKAGES += \
