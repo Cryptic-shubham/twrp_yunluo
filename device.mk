@@ -7,7 +7,7 @@
 
 LOCAL_PATH := device/xiaomi/yunluo
 
- Virtual A/B
+# Virtual A/B
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
