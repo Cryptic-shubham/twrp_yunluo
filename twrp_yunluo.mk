@@ -21,8 +21,6 @@ PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 22081283G
 PRODUCT_MANUFACTURER := xiaomi
 
-# Hide Reflash TWRP
-PRODUCT_PROPERTY_OVERRIDES += ro.twrp.vendor_boot=true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
