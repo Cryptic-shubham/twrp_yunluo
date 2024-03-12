@@ -39,14 +39,14 @@ service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
     oneshot
     seclabel u:r:recovery:s0
 
-service keystore_auth /system/bin/keystore_auth
+service keystore_cli /system/bin/keystore_cli_v2
     oneshot
     user system
     group root
     disabled
     seclabel u:r:recovery:s0
 
-service keystore /system/bin/keystore /tmp/misc/keystore
+service keystore /system/bin/keystore2 /tmp/misc/keystore
     user root
     group root drmrpc readproc log
     disabled
