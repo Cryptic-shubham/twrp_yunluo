@@ -18,8 +18,8 @@ $(call inherit-product, device/xiaomi/yunluo/device.mk)
 PRODUCT_DEVICE := yunluo
 PRODUCT_NAME := twrp_yunluo
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := 22081283G
-PRODUCT_MANUFACTURER := xiaomi
+PRODUCT_MODEL := Redmi Pad
+PRODUCT_MANUFACTURER := Xiaomi
 
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
