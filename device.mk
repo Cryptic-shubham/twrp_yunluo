@@ -100,7 +100,8 @@ PRODUCT_PACKAGES += \
 	ueventd.mt6789.rc \
 	fstab.mt6789 \
 	fstab.mt8781 \
-	init.recovery.usb.rc
+	init.recovery.usb.rc \
+        init.recovery.microtrust.rc
 
 # Health
 PRODUCT_PACKAGES += \
