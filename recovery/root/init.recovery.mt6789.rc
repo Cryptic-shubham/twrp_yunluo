@@ -7,7 +7,7 @@ on init
     
 
 on boot    
-   # start health-hal-2-1
+    start health-hal-2-1
 
 on fs
     symlink /dev/block/platform/bootdevice /dev/block/bootdevice
