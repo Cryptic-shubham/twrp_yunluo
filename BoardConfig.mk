@@ -174,6 +174,7 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true 
+TW_USE_FSCRYPT_POLICY := 2
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
@@ -208,3 +209,6 @@ TW_INCLUDE_REPACKTOOLS := true
 # debug
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+# vendor boot modules
+TW_LOAD_VENDOR_BOOT_MODULES := true
