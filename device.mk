@@ -95,14 +95,14 @@ PRODUCT_PACKAGES += \
 
 # Init files
 PRODUCT_PACKAGES += \
+        init.recovery.microtrust.rc \
 	init.recovery.mt6789.rc \
 	init.recovery.mt8781.rc \
 	ueventd.mt6789.rc \
 	fstab.mt6789 \
 	fstab.mt8781 \
-	init.recovery.usb.rc \
-        init.recovery.microtrust.rc
-
+	init.recovery.usb.rc 
+        
 # Health Hal
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
