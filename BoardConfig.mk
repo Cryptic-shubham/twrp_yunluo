@@ -7,20 +7,6 @@ DEVICE_PATH := device/xiaomi/yunluo
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
-# A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    system \
-    boot \
-    vbmeta_system \
-    odm_dlkm \
-    product \
-    vbmeta_vendor \
-    vendor_dlkm \
-    system_ext \
-    vendor \ 
-    vendor_boot
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
