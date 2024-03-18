@@ -31,3 +31,9 @@ service hwservicemanager /system/bin/hwservicemanager
     task_profiles ServiceCapacityLow HighPerformance
     class animation
     shutdown critical
+
+service keystore2 /system/bin/keystore2 /data/misc/keystore
+    class early_hal
+    user keystore
+    group keystore readproc log
+    writepid /dev/cpuset/foreground/tasks
