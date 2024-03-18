@@ -49,7 +49,7 @@ TARGET_SCREEN_DENSITY := 280
 # Kernel
 TARGET_NO_KERNEL := true
 BOARD_RAMDISK_USE_LZ4 := true
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 
 # Removing kernel image parameters and replacing it with vboot
 # BOARD_KERNEL_BASE := 0x3fff8000
