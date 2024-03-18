@@ -1,9 +1,6 @@
-#
 # Copyright (C) 2024 The Android Open Source Project
 # Copyright (C) 2024 SebaUbuntu's TWRP device tree generator
-#
 # SPDX-License-Identifier: Apache-2.0
-#
 
 DEVICE_PATH := device/xiaomi/yunluo
 
@@ -21,8 +18,8 @@ AB_OTA_PARTITIONS += \
     vbmeta_vendor \
     vendor_dlkm \
     system_ext \
-    vendor
-BOARD_USES_RECOVERY_AS_BOOT := true
+    vendor \ 
+    vendor_boot
 
 # Architecture
 TARGET_ARCH := arm64
@@ -38,9 +35,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
-
-# APEX
-DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := yunluo
@@ -76,7 +70,7 @@ endif
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
