@@ -18,3 +18,16 @@ service gatekeeperd /system/bin/gatekeeperd /data/misc/gatekeeper
     class late_start
     user system
     writepid /dev/cpuset/system-background/tasks
+
+service hwservicemanager /system/bin/hwservicemanager
+    user system
+    disabled
+    group system readproc
+    critical
+    onrestart setprop hwservicemanager.ready false
+    onrestart class_restart main
+    onrestart class_restart hal
+    onrestart class_restart early_hal
+    task_profiles ServiceCapacityLow HighPerformance
+    class animation
+    shutdown critical
