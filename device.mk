@@ -18,15 +18,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
-    system \
     boot \
-    vbmeta_system \
-    odm_dlkm \
+    dtbo \
     product \
+    system \
+    vbmeta \
+    vbmeta_system \
     vbmeta_vendor \
-    vendor_dlkm \
-    system_ext \
-    vendor \ 
+    vendor \
     vendor_boot
 
 # A/B
