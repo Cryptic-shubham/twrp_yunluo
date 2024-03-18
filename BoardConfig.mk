@@ -178,3 +178,6 @@ TW_INCLUDE_REPACKTOOLS := true
 # Debug
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
+
+# Boots vendor boot modules during boot
+TW_LOAD_VENDOR_BOOT_MODULES := true
