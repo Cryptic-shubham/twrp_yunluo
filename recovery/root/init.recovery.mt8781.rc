@@ -28,6 +28,15 @@ service touchfeature-hal-1-0 /vendor/bin/hw/vendor.xiaomi.hardware.touchfeature@
     onrestart restart touchfeature-hal-1-0
     seclabel u:r:recovery:s0
 
+service vold /system/bin/vold \
+        --blkid_context=u:r:blkid:s0 --blkid_untrusted_context=u:r:blkid_untrusted:s0 \
+        --fsck_context=u:r:fsck:s0 --fsck_untrusted_context=u:r:fsck_untrusted:s0
+    class core
+    ioprio be 2
+    writepid /dev/cpuset/foreground/tasks
+    shutdown critical
+    group root reserved_disk
+
 service gatekeeperd /system/bin/gatekeeperd /data/misc/gatekeeper
     class late_start
     user system
